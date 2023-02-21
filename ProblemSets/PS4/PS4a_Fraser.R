@@ -1,3 +1,6 @@
+library(jsonlite)
+library(tidyverse)
+library(dplyr)
 #5. #dont forget to exit linux!
 system('linux shell command')
 # Read the JSON data from the file
@@ -11,13 +14,13 @@ mydf <- bind_rows(mylist$result[-1])
 #d.
 class(mydf)
 class(mydf$date)
+#> class(mydf)
+#[1] "tbl_df"     "tbl"        "data.frame"
+#> class(mydf$date)
+#[1] "character"
 #e.
 head(mydf, n=10)
 
-
-system(Rscript path/to/script.R)
-Rscript ~Desktop/ECON 5253/DScourseS23/PS4a_Fraser.R/
-
-Rscript /Users/username/Desktop/ECON\ 5253/DScourseS23/PS4a_Fraser.R
-Rscript /Users/username/Desktop/ECON\ 5253/DScourseS23/PS4a_Fraser.R
+setwd("/Desktop/ECON 5253/DScourseS23/ProblemSets/PS4/")
+source("Script.R") 
 
