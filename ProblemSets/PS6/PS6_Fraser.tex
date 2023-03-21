@@ -1,0 +1,62 @@
+\documentclass{article}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+
+\title{PS6}
+\author{Opal Fraser}
+
+\begin{document}
+\maketitle
+
+\section{How I cleaned and plotted the data I retreived from the World Bank}
+\begin{enumerate}
+
+\item I chose the countries and the data series for financial assets in the World Bank Gender Statistics DataBank, and transposed the data in excel. I was not able to get the data from scraping or API, it is only available as download. 
+\item loaded the Excel sheet using readxl package
+\item deleted columns that had no relevance
+\item created data frame with 9 variables, and three observations. 
+ \item created the first plot using ggplot(1)
+ \item saved the plot as a PNG file
+ \item plotted second plot using ggplot(2)
+ \item saved the plot as a PNG file
+ \item created plot1
+ \item created plot2
+ \item combined the plots into one using gridExtra package
+ \item saved the combined plot as a PNG file 
+ \item I changed the plots to dark theme to try to make the graph more visibly pleasing to the eye. 
+ \end{enumerate} 
+
+\section{The Data}
+The graphs are communicating both genders as a percentage of the population of a given country, over the age of 15, with an account at a financial institution. The respondents reported having an account (by themselves or together with someone else) at a bank or another type of financial institution.  The countries we can see are United States, France, Singapore, Japan, Sweden, Switzerland, Netherlands, Germany, and OECD members. The OECD members data is simply a weighted average percentage which includes the members of the Organisation for Economic Co-operation and Development. 
+
+I originally wanted to reveal a gender gap within the United States, and it seems to be the case. The data displays a difference of 0.88 percent. More interesting, both genders in the US have a higher percentage of account holders than most OECD countries, and a lower percentage of account holders than Switerland, Netherlands, Germany, Singapore, and Japan. 
+Additionally, France seems to have a wider banking gender gap than the US with a difference of 5.69 percent between the two genders. 
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth]{Females.png}
+\caption{\label{fig:female}This graph shows the females as a percentage of population, age 15+, with an account at a financial institution. }
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth]{Males.png}
+\caption{\label{fig:male}This graph shows the males as a percentage of population, age 15+, with an account at a financial institution.}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=1\textwidth]{combined_plot.png}
+\caption{\label{fig:combined}This is a combined bar plot with both male and female, age 15+ with an account at a financial institution.}
+\end{figure}
+from:
+ \url{https://databank.worldbank.org/source/gender-statistics}.
+
+\end{document}
