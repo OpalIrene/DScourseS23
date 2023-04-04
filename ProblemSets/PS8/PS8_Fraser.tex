@@ -1,0 +1,35 @@
+\documentclass{article}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{PS8}
+\author{Opal Fraser}
+
+\begin{document}
+\maketitle
+
+\section{Regression Table}
+[[1]]
+
+Call:
+lm(formula = Y ~ X - 1)
+
+Coefficients:
+     X1       X2       X3       X4       X5       X6  
+ 1.5006  -0.9956  -0.2486   0.7472   3.5018  -1.9994  
+     X7       X8       X9      X10  
+ 0.5011   0.9987   1.2528   1.9994  
+
+\subsection{Beta}
+
+The estimated coefficients of are very close to the "ground truth" values of beta that we used to create the data in (1). This is an indication that the linear regression model is able to recover the underlying relationship between X and Y. The small differences are likely due to the presence of noise in the data. 
+
+
+\end{document}
