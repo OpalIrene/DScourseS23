@@ -1,0 +1,53 @@
+\documentclass{article}
+
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{PS12}
+\author{Opal Fraser}
+
+\begin{document}
+\maketitle
+
+
+\section{6.}
+
+
+%-------------
+% table
+%-------------
+
+\input{table.tex}
+
+At what rate are log wages missing? 
+answer: 0.3068641 so, abotu 30 percent are missing
+Do you think the logwage variable is most likely
+to be MCAR, MAR, or MNAR?
+answer: MAR, some are married and missing possibly due to being a new mom, having a child, off work. Some are union and missing, like if the wages for union jobs were above a certain threshold and not recorded, this could lead to missing logwage values for union jobs. Some are what seems to be in college years and missing. 
+
+
+
+\section{7.}
+
+The coefficient b1 represents the returns to schooling. 
+
+The true value of ˆb1 = 0.091. Comment on the differences of ˆb1 across the models.
+What patterns do you see? What can you conclude about the veracity of the various imputation methods?
+
+a. complete cases only; b1=0.059042 rSq=0.03472 -statistically significant-error-0.009035; midrange rsq, midrange error
+b. mean-logwage; b1=0.0362806 rSq=0.01808 -statistically significant-error-0.0062036; lower rSq, lower error
+c. heckit-model; b1=0.091461 rSq=0.091461 -statistically significant-error-0.009789; higher rSq, higher error
+
+Pattern is high rSq- higher error, lower rSq-smaller error. I would say the heckit model is the best of the three followed by complete cases only and last I would chose is mean-logwage. 
+\input{table1.tex}
+
+
+
+\end{document}
